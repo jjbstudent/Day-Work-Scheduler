@@ -13,3 +13,16 @@ $(document).ready(function() {
     var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return daysOfWeek[dayIndex];
   }
+
+
+  $(document).ready(function() {
+    // Display current day
+    var currentDay = moment().format('dddd');
+    $('#currentDay').text('Today is ' + currentDay);
+
+    // Display current time with AM/PM
+    var currentTime = moment().format('hh:mm A');
+    $('#currentTime').text('Current time is ' + currentTime);
+          // Log current time to console
+          console.log('Current time (console): ' + currentTime);
+  });
