@@ -25,6 +25,30 @@ function getDayName(dayIndex) {
   return daysOfWeek[dayIndex];
 }
 
+$(document).ready(function() {
+  // Function to update the classes based on the current time
+  function updateTextAreaClasses() {
+    // Get the current hour
+    var currentHour = moment().hour();
+
+    // Loop through each time block and update the classes
+    $('.time-block').each(function() {
+      var blockHour = parseInt($(this).find('.hour p').text());
+
+      if (blockHour < currentHour) {
+        $(this).find('textarea').addClass('past');
+      } else if (blockHour === currentHour) {
+        $(this).find('textarea').addClass('present');
+      } else {
+        $(this).find('textarea').addClass('future');
+      }
+    });
+  }
+
+  // Call the function when the document is ready
+  updateTextAreaClasses();
+});
+
 
 
 //function to save my text to local storage
