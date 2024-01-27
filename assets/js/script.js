@@ -31,8 +31,11 @@ $(document).ready(function() {
     // Get the content of the textarea
     var textContent = document.getElementById(textAreaId).value;
 
-    // You can now save 'textContent' to your desired storage or perform other actions
-    console.log('Saving:', textContent);
+    // Save the content to local storage
+    localStorage.setItem(textAreaId, textContent);
+
+    // You can optionally provide feedback to the user that the save was successful
+    console.log('Saved:', textContent);
   }
 
 
