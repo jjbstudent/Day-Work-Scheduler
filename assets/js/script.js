@@ -26,30 +26,33 @@ function getDayName(dayIndex) {
 }
 
 $(document).ready(function() {
-  // Function to update the classes based on the current time
-  function updateTextAreaClasses() {
-    // Get the current hour
-    var currentHour = moment().hour();
 
-    // Loop through each time block and update the classes
-    $('.time-block').each(function() {
-      var blockHour = parseInt($(this).find('.hour p').text());
+ // Function to update the classes based on the stored times and current time
+ function updateTextAreaClasses() {
+  // Get the current moment
+  var currentMoment = moment();
 
-      if (blockHour < currentHour) {
-        $(this).find('textarea').addClass('past');
-      } else if (blockHour === currentHour) {
-        $(this).find('textarea').addClass('present');
-      } else {
-        $(this).find('textarea').addClass('future');
-      }
-    });
-  }
+  // Loop through each time block
+  $('.time-block').each(function() {
+    // Get the stored hour from local storage
+    var storedHour = moment($(this).find('.hour p').text(), 'hA');
 
+    // Compare stored moment with current moment
+    if (storedHour.isBefore(currentMoment, 'hour')) {
+      $(this).find('textarea').addClass('past');
+      console.log(storedHour.format('hA') + ' is in the past.');
+    } else if (storedHour.isSame(currentMoment, 'hour')) {
+      $(this).find('textarea').addClass('present');
+      console.log(storedHour.format('hA') + ' is the present time.');
+    } else {
+      $(this).find('textarea').addClass('future');
+      console.log(storedHour.format('hA') + ' is in the future.');
+    }
+  });
+}
   // Call the function when the document is ready
   updateTextAreaClasses();
 });
-
-
 
 //function to save my text to local storage
   function saveText(textAreaId) {
