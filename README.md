@@ -1,87 +1,95 @@
-# Third-Party APIs: Work Day Scheduler
-
-## Your Task
-
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Day.js](https://day.js.org/docs/en/display/format) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+# Daily Planner App Readme
 
 ## User Story
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+As an employee with a busy schedule, I want to have a convenient daily planner to add and manage important events. This will allow me to organize my time effectively and improve productivity.
 
 ## Acceptance Criteria
 
-The app should:
+The Daily Planner app should:
 
-* Display the current day at the top of the calender when a user opens the planner.
- 
-* Present timeblocks for standard business hours when the user scrolls down.
- 
-* Color-code each timeblock based on past, present, and future when the timeblock is viewed.
- 
-* Allow a user to enter an event when they click a timeblock
+1. **Display Current Day:**
+   - When a user opens the planner, the current day should be prominently displayed at the top of the calendar.
 
-* Save the event in local storage when the save button is clicked in that timeblock.
+2. **Present Timeblocks:**
+   - Timeblocks for standard business hours should be presented to the user as they scroll down the planner.
 
-* Persist events between refreshes of a page
+3. **Color-coded Timeblocks:**
+   - Each timeblock should be color-coded based on whether it represents the past, present, or future when viewed.
+     - Past timeblocks: Different color to indicate they have already occurred.
+     - Present timeblock: Highlighted with a distinct color to signify the current time.
+     - Future timeblocks: A separate color to suggest upcoming events.
 
-The following animation demonstrates the application functionality:
+4. **Event Entry:**
+   - A user should be able to click on a timeblock to enter an event for that specific time.
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./images/05-third-party-apis-homework-demo.gif)
+5. **Save Event to Local Storage:**
+   - When the user clicks the save button within a timeblock, the entered event should be saved in the local storage.
+
+6. **Persistence between Refreshes:**
+   - Events entered into the planner should persist between page refreshes. This ensures that the user's schedule is retained and can be easily accessed even after a page reload.
+
+## How to Use
+
+- Open the Daily Planner app.
+- Observe the current day at the top of the calendar.
+- Scroll down to view timeblocks for standard business hours.
+- Color-coded timeblocks indicate past, present, and future events.
+- Click on a timeblock to enter an event for that specific time.
+- Save the event by clicking the save button within the timeblock.
+- Events are saved in local storage, providing persistence between page refreshes.
+
+This Daily Planner app is designed to provide a user-friendly and efficient way for individuals with busy schedules to manage their daily events and tasks.
+``
+![demo](/images/05-third-party-apis-homework-demo.gif)
+
+## Installation
+
+1. Clone the repository to your local machine:
+
+    ```bash
+    git clone git@github.com:jjbstudent/Day-Work-Scheduler.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd Day-Work-Scheduler
+    ```
+
+3. Open the `index.html` file in your preferred web browser.
+
+## Contributing
+
+Password Generator contributions got to.
+
+- Boot camp TA assistants 
+
+- Boot camp tutor session
+
+- Joe Rehfuss online demonstrations
+
+- [Day.js](https://day.js.org/docs/en/display/format)
+
+- https://stackoverflow.com/questions/4392801/parse-time-data-from-html-using-jquery
+
+- https://www.w3schools.com/jquery/default.asp
 
 
-## Grading Requirements
+## License
 
-This homework is graded based on the following criteria: 
+This Password Generator is distributed under the MIT license. Please refer to the LICENSE.md file for more details.
 
-### Technical Acceptance Criteria: 40%
+## Credits
 
-* Satisfies all of the above acceptance criteria plus the following:
+All Credits to Boot Camp TA's and students who assisted me in completing this project
 
-  * Uses a date utility library to work with date and time
+## Contact
 
-### Deployment: 32%
+For any inquiries, feedback.
 
-* Application deployed at live URL
+- jblearn2023@gmail.com
+- https://github.com/jjbstudent
 
-* Application loads with no errors
 
-* Application GitHub URL submitted
 
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
