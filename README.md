@@ -41,6 +41,9 @@ The Daily Planner app should:
 
 This Daily Planner app is designed to provide a user-friendly and efficient way for individuals with busy schedules to manage their daily events and tasks.
 ``
+
+open webpage to test : https://jjbstudent.github.io/Day-Work-Scheduler/
+
 ![demo](/images/05-third-party-apis-homework-demo.gif)
 
 ## Installation
