@@ -30,7 +30,7 @@ $(document).ready(function() {
   function saveText(textAreaId) {
     // Get the content of the textarea
     var textContent = document.getElementById(textAreaId).value;
-    localStorage.setItem =(textAreaId, textContent);
+    localStorage.setItem(textAreaId, textContent);
     console.log('Saved:', textContent);
   }
 
