@@ -26,3 +26,13 @@ $(document).ready(function() {
           // Log current time to console
           console.log('Current time (console): ' + currentTime);
   });
+
+  function saveText(textAreaId) {
+    // Get the content of the textarea
+    var textContent = document.getElementById(textAreaId).value;
+
+    // You can now save 'textContent' to your desired storage or perform other actions
+    console.log('Saving:', textContent);
+  }
+
+
