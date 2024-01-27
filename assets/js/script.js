@@ -25,6 +25,23 @@ $(document).ready(function() {
     $('#currentTime').text('Current time is ' + currentTime);
           // Log current time to console
           console.log('Current time (console): ' + currentTime);
+
+          // Get the current hour using JavaScript Date object
+const currentHour = new Date().getHours();
+
+// Loop through each row with class "hour" and compare with the current hour
+document.querySelectorAll('.hour p').forEach(pTag => {
+  const hour = parseInt(pTag.innerText);
+  const row = pTag.closest('.row');
+
+  if (hour < currentHour) {
+    row.classList.add('past');
+  } else if (hour === currentHour) {
+    row.classList.add('present');
+  } else {
+    row.classList.add('future');
+  }
+});
   });
 //function to save my text to local storage
   function saveText(textAreaId) {
@@ -40,10 +57,12 @@ $(document).ready(function() {
         var key = localStorage.key(i);
         var value = localStorage.getItem(key);
         document.getElementById(key).value = value;
+
       }
     }
   
     // Call the function to load saved text when the page loads
     window.onload = loadSavedText;
+   
 
 
